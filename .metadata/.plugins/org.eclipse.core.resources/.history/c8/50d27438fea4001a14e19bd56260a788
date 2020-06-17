@@ -1,0 +1,50 @@
+package com.selenium.concepts;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Browprac {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Sabarish\\eclipse-workspace\\SeleniumConcepts\\Drivers\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.instagram.com/");
+		
+		WebElement email = driver.findElement(By.name("username"));
+		email.sendKeys("abc@gmail.com");
+		
+		
+		WebElement pass = driver.findElement(By.name("password"));
+		pass.sendKeys("123454");
+		
+		WebElement login = driver.findElement(By.xpath("(//button[contains(@class,'sqdOP ')])[2]"));
+		login.click();
+		
+		
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+}

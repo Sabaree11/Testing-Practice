@@ -1,0 +1,84 @@
+package com.selenium.concepts;
+
+import java.awt.Desktop.Action;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.server.handler.AcceptAlert;
+import org.openqa.selenium.support.ui.Select;
+
+public class Mousehover {
+public static void main(String[] args) throws InterruptedException {
+	
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sabarish\\eclipse-workspace\\SeleniumConcepts\\Drivers\\chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.get("https://artoftesting.com/samplesiteforselenium");
+	driver.manage().window().maximize();
+	
+	WebElement Input = driver.findElement(By.id("fname"));
+	Input.sendKeys("Testing Demo");
+	Thread.sleep(2000);
+	
+	WebElement Button = driver.findElement(By.id("idOfButton"));
+	Button.click();
+	Thread.sleep(2000);
+
+	WebElement Dclick = driver.findElement(By.id("dblClkBtn"));
+	Actions ac = new Actions(driver);
+	ac.doubleClick(Dclick).perform();
+	Thread.sleep(2000);
+
+	Alert alert = driver.switchTo().alert();
+	alert.accept();
+	Thread.sleep(2000);
+	driver.switchTo().defaultContent();
+	
+	WebElement Rbutton = driver.findElement(By.id("male"));
+	Rbutton.click();
+	Thread.sleep(2000);
+
+	WebElement Chkbox = driver.findElement(By.xpath("//input[@class='Automation']"));
+	Chkbox.click();
+	Thread.sleep(2000);
+	
+	WebElement Dropdwn = driver.findElement(By.id("testingDropdown"));
+	Select Drop= new Select(Dropdwn);
+	Drop.selectByValue("Performance");
+	Thread.sleep(2000);
+
+	WebElement Alertbo = driver.findElement(By.id("AlertBox"));
+	Alertbo.click();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

@@ -1,0 +1,70 @@
+package com.selenium.concepts;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Alertdem {
+public static void main(String[] args) throws InterruptedException {
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sabarish\\eclipse-workspace\\SeleniumConcepts\\Drivers\\chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.get("http://demo.automationtesting.in/Alerts.html");
+
+	WebElement Simple = driver.findElement(By.xpath("(//a[@class='analystic'])[1]"));
+	Simple.click();
+	Thread.sleep(2000);
+	
+	
+	WebElement Salert= driver.findElement(By.xpath("//button[@class='btn btn-danger']"));
+	Salert.click();
+	Thread.sleep(2000);
+	Alert alert = driver.switchTo().alert();
+	alert.accept();
+	Thread.sleep(2000);
+	driver.switchTo().defaultContent();
+	
+	
+	WebElement Confirm = driver.findElement(By.xpath("(//a[@class='analystic'])[2]"));
+	Confirm.click();
+	Thread.sleep(2000);
+
+	WebElement calert = driver.findElement(By.xpath("//button[@class='btn btn-primary']"));
+	calert.click();
+	Thread.sleep(2000);
+	driver.switchTo().alert();
+	alert.dismiss();
+	Thread.sleep(2000);
+	driver.switchTo().defaultContent();
+	
+	
+	WebElement Prompt = driver.findElement(By.xpath("(//a[@class='analystic'])[3]"));
+	Prompt.click();
+	Thread.sleep(2000);
+	
+	WebElement Palert = driver.findElement(By.xpath("//button[@class='btn btn-info']"));
+	Palert.click();
+	Thread.sleep(2000);
+	driver.switchTo().alert();
+	alert.sendKeys("Hi");
+	alert.accept();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+}

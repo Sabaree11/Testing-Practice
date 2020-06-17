@@ -1,0 +1,13 @@
+package com.employee;
+
+public class Sampleprg {
+	public static void name() {
+	System.out.println("hell");	
+	} 	
+	public static void main(String[] args) {
+		name();
+	}
+	
+	
+
+}

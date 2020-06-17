@@ -1,0 +1,54 @@
+package com.selenium.concepts;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Mousehover {
+public static void main(String[] args) throws InterruptedException {
+	
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sabarish\\eclipse-workspace\\SeleniumConcepts\\Drivers\\chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.get("https://artoftesting.com/samplesiteforselenium");
+
+	
+	WebElement Input = driver.findElement(By.id("fname"));
+	Input.sendKeys("Testing Demo");
+	Thread.sleep(2000);
+	
+	WebElement Button = driver.findElement(By.id("idOfButton"));
+	Button.click();
+	Thread.sleep(2000);
+
+	WebElement Dclick = driver.findElement(By.id("dblClkBtn"));
+	Dclick.click();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

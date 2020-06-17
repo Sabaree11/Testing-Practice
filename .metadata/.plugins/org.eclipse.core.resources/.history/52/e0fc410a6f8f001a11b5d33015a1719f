@@ -1,0 +1,11 @@
+package com.employee;
+
+public class Stringmet {
+	public static void main(String[] args) {
+		String s="Welcome to Java Class";
+	String replaced=s.replace(" ", "$");
+	
+	System.out.println("replace"+ replaced);
+	}
+
+}
